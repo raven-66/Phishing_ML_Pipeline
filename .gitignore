@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebooks (checkpoints)
+*.ipynb_checkpoints/
+
+# Databricks
+*.dbc
+*.pyc
+
+# Credentials - IMPORTANT!
+*password*
+*secret*
+*key*
+*.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (large files)
+*.csv
+*.parquet
+*.pkl
+*.joblib
+
+# Images (optional – remove # if you want to exclude images)
+# *.png
+# *.jpg
+# *.jpeg

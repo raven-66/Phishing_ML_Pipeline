@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: snowflake
+    database: URL_DATABASE
+    schema: PUBLIC
+    tables:
+      - name: PHISING_URL_DATASET
+        description: "Kaggle Phishing URL dataset with 74 pre-calculated features"
