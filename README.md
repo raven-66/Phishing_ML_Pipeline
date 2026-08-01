@@ -44,4 +44,4 @@ This project builds an end-to-end machine learning pipeline to detect phishing U
 - Databricks (ML Platform)
 
 ## Author
-Fanny Gravlund
+Fanny Graven
