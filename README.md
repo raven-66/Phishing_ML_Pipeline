@@ -20,14 +20,22 @@ This project builds an end-to-end machine learning pipeline to detect phishing U
 ## Models
 | Model | Accuracy | Precision | Recall | F1-score |
 |-------|----------|-----------|--------|----------|
-| Random Forest | 98.52% | 99.09% | 97.32% | 98.20% |
-| Isolation Forest | 63.82% | - | - | - |
-| Pipeline (IF → RF) | 98.81% | 99.22% | 99.10% | 99.16% |
+| Random Forest | 98.45% | 99.06% | 97.06% | 98.05% |
+| Isolation Forest | 64.48% | - | - | - |
+| Pipeline (IF → RF) | 98.81% | 99.37% | 98.95% | 99.16% |
 
 ## Key Results
-- The **pipeline (Isolation Forest → Random Forest)** improved accuracy by 0.29% compared to Random Forest alone.
-- Isolation Forest concentrated phishing from 40.32% to 70.66% among suspicious URLs.
-- No significant overfitting detected (training vs test difference: 1.53% for Random Forest, 1.20% for Pipeline).
+- The **pipeline (Isolation Forest → Random Forest)** improved accuracy by 0.36% compared to Random Forest alone.
+- Isolation Forest concentrated phishing from 40.32% to 73.79% among suspicious URLs.
+- False positives reduced from 477 to 52 (-425).
+- False negatives reduced from 1,325 to 86 (-1,239).
+- No significant overfitting detected (training vs test difference: 1.55% for Random Forest, 1.19% for Pipeline).
+
+## Important Note on Result Variability
+Results may vary slightly between runs due to the randomness inherent in Random Forest (`random_state=42` is used to ensure reproducibility). The differences are minimal (typically < 0.5%) and do not affect the overall conclusions. All runs consistently show the same key findings:
+- Pipeline outperforms Random Forest on all metrics
+- Isolation Forest works effectively as a filter
+- Models generalize well and do not overfit
 
 ## Files
 - `notebooks/phishing_ml_pipeline_final.ipynb` – Full Databricks notebook
